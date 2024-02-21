@@ -1,0 +1,115 @@
+<!-- /var/ossec/etc/decoders/local_decoder.xml -->
+
+<!-- KSC Custom Decoders -->
+
+<decoder name="Kaspersky">
+  <prematch>KES</prematch>
+</decoder>
+
+<decoder name="Kaspersky-field">
+  <parent>Kaspersky</parent>
+  <regex>hdn="(\S+)"</regex>
+  <order>host</order>
+</decoder>
+
+<decoder name="Kaspersky-field">
+  <parent>Kaspersky</parent>
+  <regex>hip="(\d+.\d+.\d+.\d+)"</regex>
+  <order>dstip</order>
+</decoder>
+
+<decoder name="Kaspersky-field">
+  <parent>Kaspersky</parent>
+  <regex>tdn="(\.*)"</regex>
+  <order>KES.module</order>
+</decoder>
+
+<decoder name="Kaspersky-field">
+  <parent>Kaspersky</parent>
+  <regex>etdn="(\.*)"</regex>
+  <order>KES.module.action</order>
+</decoder>
+
+<decoder name="Kaspersky-field">
+  <parent>Kaspersky</parent>
+  <regex>gn="(\.*)"</regex>
+  <order>KES.group</order>
+</decoder>
+
+<decoder name="Kaspersky-field">
+  <parent>Kaspersky</parent>
+  <regex>kscfqdn="(\.*)"</regex>
+  <order>KES.server</order>
+</decoder>
+
+<decoder name="Kaspersky-field">
+  <parent>Kaspersky</parent>
+  <regex>event@(\d+)</regex>
+  <order>KES.event</order>
+</decoder>
+
+<decoder name="Kaspersky-field">
+  <parent>Kaspersky</parent>
+  <regex>https://(\.*)"|http://(\.*)"</regex>
+  <order>url</order>
+</decoder>
+
+<decoder name="Kaspersky-field">
+  <parent>Kaspersky</parent>
+  <regex>p1="(\.*)"</regex>
+  <order>KES.p1</order>
+</decoder>
+
+<decoder name="Kaspersky-field">
+  <parent>Kaspersky</parent>
+  <regex>p2="(\.*)"</regex>
+  <order>KES.p2</order>
+</decoder>
+
+<decoder name="Kaspersky-field">
+  <parent>Kaspersky</parent>
+  <regex>p3="(\.*)"</regex>
+  <order>KES.p3</order>
+</decoder>
+
+<decoder name="Kaspersky-field">
+  <parent>Kaspersky</parent>
+  <regex>p4="(\.*)"</regex>
+  <order>KES.p4</order>
+</decoder>
+
+<decoder name="Kaspersky-field">
+  <parent>Kaspersky</parent>
+  <regex>p5="(\.*)"</regex>
+  <order>KES.p5</order>
+</decoder>
+
+<decoder name="Kaspersky-field">
+  <parent>Kaspersky</parent>
+  <regex>p6="(\.*)"</regex>
+  <order>KES.p6</order>
+</decoder>
+
+<decoder name="Kaspersky-field">
+  <parent>Kaspersky</parent>
+  <regex>p7="(\.*)"</regex>
+  <order>KES.p7</order>
+</decoder>
+
+<decoder name="Kaspersky-field">
+  <parent>Kaspersky</parent>
+  <regex>p8="(\.*)"</regex>
+  <order>KES.p8</order>
+</decoder>
+
+<decoder name="Kaspersky-field">
+  <parent>Kaspersky</parent>
+  <regex>\\\\(\.*)"</regex>
+  <order>dstuser</order>
+</decoder>
+
+<decoder name="Kaspersky-field">
+  <parent>Kaspersky</parent>
+  <regex>et="(\.*)"</regex>
+  <order>KES.event.code</order>
+</decoder>
