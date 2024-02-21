@@ -1,0 +1,1 @@
+# KSC_decoders_and_rules_for_Wazuh_ru_RU
