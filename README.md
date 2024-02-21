@@ -56,7 +56,7 @@
    - KLAUD_EV_SERVERCONNECT // Аудит (подключение к Серверу администрирования)
 
 ## Интеграция с MITRE ATT&CK
-![image](https://github.com/tread-lightly/KSC-decoders-and-rules-for-Wazuh-ru-RU/assets/125260132/6e2d123b-00b4-4e33-9e74-07197e71e903)
+![123](https://github.com/tread-lightly/KSC_decoders_and_rules_for_Wazuh_ru_RU/assets/125260132/dd3dae2f-edee-4d4b-a16c-184ab91edd6d)
 
 ## Пример функционирования
 Для корректной обработки dstuser в соответствующий декодер нужно добавить имя домена:
@@ -70,6 +70,6 @@
 ```
 Результат обработки:
 
-![a](https://github.com/tread-lightly/KSC-decoders-and-rules-for-Wazuh-ru-RU/assets/125260132/c2ba7be2-de74-4776-b541-2cd60bc82894)
+![a](https://github.com/tread-lightly/KSC_decoders_and_rules_for_Wazuh_ru_RU/assets/125260132/797b7f4d-6b73-4073-8b6c-d9ab54ad5c71)
 
 [![telegram:](https://img.shields.io/badge/Telegram-@wladimirwakhrushew-blue)](https://t.me/wladimirwakhrushew)
