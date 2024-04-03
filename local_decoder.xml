@@ -3,8 +3,15 @@
 <!-- KSC Custom Decoders -->
 
 <decoder name="Kaspersky">
-  <prematch>KES</prematch>
+  <prematch>KES|WSEE</prematch>
 </decoder>
+
+<!-- 
+или
+<decoder name="Kaspersky">
+  <prematch>event@23668</prematch>
+</decoder>
+-->
 
 <decoder name="Kaspersky-field">
   <parent>Kaspersky</parent>
