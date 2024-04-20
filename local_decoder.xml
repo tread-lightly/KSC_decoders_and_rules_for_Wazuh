@@ -3,13 +3,12 @@
 <!-- KSC Custom Decoders -->
 
 <decoder name="Kaspersky">
-  <prematch>KES|WSEE</prematch>
+  <prematch>event@23668</prematch>
 </decoder>
 
-<!-- 
-или
+<!-- или доменное имя сервера KSC, идущее в логах перед |11.0.0.0 - например: KES для лога KES|11.0.0.0
 <decoder name="Kaspersky">
-  <prematch>event@23668</prematch>
+  <prematch>KES</prematch>
 </decoder>
 -->
 
