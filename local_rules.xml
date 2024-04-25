@@ -47,288 +47,298 @@
 <!-- KES rules -->
 
 <group name="KES.rules,">
-<rule id="100001" level="12">
-<field name="KES.type">0000013a</field>
-<decoded_as>Kaspersky</decoded_as>
-<description>KES ($(KES.module)): $(KES.module.action) на $(host)</description>
-</rule>
+  <rule id="100001" level="5">
+    <field name="KES.type">0000013a</field>
+    <decoded_as>Kaspersky</decoded_as>
+    <description>KES ($(KES.module)): $(KES.module.action) на $(dhost)</description>
+  </rule>
 
-<rule id="100002" level="12">
-<field name="KES.event.code">GNRL_EV_OBJECT_BLOCKED</field>
-<decoded_as>Kaspersky</decoded_as>
-<mitre><id>T1204.002</id></mitre>
-<description>KES ($(KES.module)): $(KES.module.action) на $(host)</description>
-</rule>
+  <rule id="100002" level="14">
+    <field name="KES.event.code">GNRL_EV_OBJECT_BLOCKED</field>
+    <decoded_as>Kaspersky</decoded_as>
+    <mitre><id>T1204.002</id></mitre>
+    <description>KES ($(KES.module)): $(KES.module.action) на $(host)</description>
+  </rule>
 
-<rule id="100003" level="12">
-<field name="KES.event.code">GNRL_EV_VIRUS_FOUND</field>
-<mitre><id>T1204.002</id></mitre>
-<decoded_as>Kaspersky</decoded_as>
-<description>KES ($(KES.module)): $(KES.module.action) на $(host)</description>
-</rule>
+  <rule id="100003" level="14">
+    <field name="KES.event.code">GNRL_EV_VIRUS_FOUND</field>
+    <mitre><id>T1204.002</id></mitre>
+    <decoded_as>Kaspersky</decoded_as>
+    <description>KES ($(KES.module)): $(KES.module.action) на $(host)</description>
+  </rule>
 
-<rule id="100004" level="7">
-<field name="KES.event.code">0000003c</field>
-<mitre><id>T1587.003</id></mitre>
-<decoded_as>Kaspersky</decoded_as>
-<description>KES ($(KES.module)): $(KES.module.action) на $(host)</description>
-</rule>
+  <rule id="100004" level="5">
+    <field name="KES.event.code">0000003c</field>
+    <mitre><id>T1587.003</id></mitre>
+    <decoded_as>Kaspersky</decoded_as>
+    <description>KES ($(KES.module)): $(KES.module.action) на $(host)</description>
+  </rule>
 
-<rule id="100005" level="12">
-<field name="KES.event.code">GNRL_EV_WEB_URL_BLOCKED</field>
-<mitre><id>T1204.002</id></mitre>
-<decoded_as>Kaspersky</decoded_as>
-<description>KES ($(KES.module)): $(KES.module.action) на $(host)</description>
-</rule>
+  <rule id="100005" level="14">
+    <field name="KES.event.code">GNRL_EV_WEB_URL_BLOCKED</field>
+    <mitre><id>T1204.001</id></mitre>
+    <decoded_as>Kaspersky</decoded_as>
+    <description>KES ($(KES.module)): $(KES.module.action) на $(host)</description>
+  </rule>
 
-<rule id="100006" level="7">
-<field name="KES.event.code">00000039</field>
-<mitre><id>T1587.003</id></mitre>
-<decoded_as>Kaspersky</decoded_as>
-<description>KES ($(KES.module)): $(KES.module.action) на $(host)</description>
-</rule>
+  <rule id="100006" level="5">
+    <field name="KES.event.code">00000039</field>
+    <mitre><id>T1587.003</id></mitre>
+    <decoded_as>Kaspersky</decoded_as>
+    <description>KES ($(KES.module)): $(KES.module.action) на $(host)</description>
+  </rule>
 
-<rule id="100007" level="11">
-<field name="KES.event.code">GNRL_EV_SUSPICIOUS_OBJECT_FOUND</field>
-<mitre><id>T1204.002</id></mitre>
-<decoded_as>Kaspersky</decoded_as>
-<description>KES ($(KES.module)): $(KES.module.action) на $(host)</description>
-</rule>
+  <rule id="100007" level="14">
+    <field name="KES.event.code">GNRL_EV_SUSPICIOUS_OBJECT_FOUND</field>
+    <mitre><id>T1204.002</id></mitre>
+    <decoded_as>Kaspersky</decoded_as>
+    <description>KES ($(KES.module)): $(KES.module.action) на $(host)</description>
+  </rule>
 
-<rule id="100008" level="11">
-<field name="KES.event.code">GNRL_EV_OBJECT_CURED</field>
-<mitre><id>T1204.002</id></mitre>
-<decoded_as>Kaspersky</decoded_as>
-<description>KES ($(KES.module)): $(KES.module.action) на $(host)</description>
-</rule>
+  <rule id="100008" level="10">
+    <field name="KES.event.code">GNRL_EV_OBJECT_CURED</field>
+    <mitre><id>T1204.002</id></mitre>
+    <decoded_as>Kaspersky</decoded_as>
+    <description>KES ($(KES.module)): $(KES.module.action) на $(host)</description>
+  </rule>
 
-<rule id="100009" level="11">
-<field name="KES.event.code">GNRL_EV_OBJECT_NOTCURED</field>
-<mitre><id>T1204.002</id></mitre>
-<decoded_as>Kaspersky</decoded_as>
-<description>KES ($(KES.module)): $(KES.module.action) на $(host)</description>
-</rule>
+  <rule id="100009" level="10">
+    <field name="KES.event.code">GNRL_EV_OBJECT_NOTCURED</field>
+    <mitre><id>T1204.002</id></mitre>
+    <decoded_as>Kaspersky</decoded_as>
+    <description>KES ($(KES.module)): $(KES.module.action) на $(host)</description>
+  </rule>
 
-<rule id="100010" level="10">
-<field name="KES.event.code">GNRL_EV_PASSWD_ARCHIVE_FOUND</field>
-<mitre><id>T1204.002</id></mitre>
-<decoded_as>Kaspersky</decoded_as>
-<description>KES ($(KES.module)): $(KES.module.action) на $(host)</description>
-</rule>
+  <rule id="100010" level="10">
+    <field name="KES.event.code">GNRL_EV_PASSWD_ARCHIVE_FOUND</field>
+    <mitre><id>T1204.002</id></mitre>
+    <decoded_as>Kaspersky</decoded_as>
+    <description>KES ($(KES.module)): $(KES.module.action) на $(host)</description>
+  </rule>
 
-<rule id="100011" level="10">
-<field name="KES.event.code">GNRL_EV_ATTACK_DETECTED</field>
-<mitre><id>T1046</id>
-<id>T1016</id>
-<id>T1049</id></mitre>
-<group>attack,</group>
-<decoded_as>Kaspersky</decoded_as>
-<description>KES ($(KES.module)): $(KES.module.action) на $(host)</description>
-</rule>
+  <rule id="100011" level="14">
+    <field name="KES.event.code">GNRL_EV_ATTACK_DETECTED</field>
+    <mitre><id>T1046</id>
+    <id>T1016</id>
+    <id>T1049</id></mitre>
+    <group>attack</group>
+    <decoded_as>Kaspersky</decoded_as>
+    <description>KES ($(KES.module)): $(KES.module.action) на $(host)</description>
+  </rule>
 
-<rule id="100012" level="12">
-<field name="KES.event.code">GNRL_EV_APPLICATION_LAUNCH_DENIED</field>
-<mitre><id>T1072</id></mitre>
-<decoded_as>Kaspersky</decoded_as>
-<description>KES ($(KES.module)): $(KES.module.action) на $(host)</description>
-</rule>
+  <rule id="100012" level="14">
+    <field name="KES.event.code">GNRL_EV_APPLICATION_LAUNCH_DENIED</field>
+    <mitre><id>T1072</id></mitre>
+    <decoded_as>Kaspersky</decoded_as>
+    <description>KES ($(KES.module)): $(KES.module.action) на $(host)</description>
+  </rule>
 
-<rule id="100013" level="11">
-<field name="KES.event.code">GNRL_EV_WEB_URL_WARNING</field>
-<mitre><id>T1204.001</id></mitre>
-<decoded_as>Kaspersky</decoded_as>
-<description>KES ($(KES.module)): $(KES.module.action) на $(host)</description>
-</rule>
+  <rule id="100013" level="10">
+    <field name="KES.event.code">GNRL_EV_WEB_URL_WARNING</field>
+    <mitre><id>T1204.001</id></mitre>
+    <decoded_as>Kaspersky</decoded_as>
+    <description>KES ($(KES.module)): $(KES.module.action) на $(host)</description>
+  </rule>
 
-<rule id="100014" level="10">
-<field name="KES.event.code">GNRL_EV_DEVCTRL_DEV_PLUGGED</field>
-<decoded_as>Kaspersky</decoded_as>
-<description>KES ($(KES.module)): $(KES.module.action) на $(host)</description>
-</rule>
+  <rule id="100014" level="5">
+    <field name="KES.event.code">GNRL_EV_DEVCTRL_DEV_PLUGGED</field>
+    <decoded_as>Kaspersky</decoded_as>
+    <description>KES ($(KES.module)): $(KES.module.action) на $(host)</description>
+  </rule>
 
-<rule id="100015" level="10">
-<field name="KES.event.code">GNRL_EV_DEVCTRL_DEV_UNPLUGGED</field>
-<decoded_as>Kaspersky</decoded_as>
-<description>KES ($(KES.module)): $(KES.module.action) на $(host)</description>
-</rule>
+  <rule id="100015" level="5">
+    <field name="KES.event.code">GNRL_EV_DEVCTRL_DEV_UNPLUGGED</field>
+    <decoded_as>Kaspersky</decoded_as>
+    <description>KES ($(KES.module)): $(KES.module.action) на $(host)</description>
+  </rule>
 
-<rule id="100016" level="12">
-<field name="KES.event.code">GNRL_EV_DEVCTRL_DEV_PLUG_DENIED</field>
-<decoded_as>Kaspersky</decoded_as>
-<description>KES ($(KES.module)): $(KES.module.action) на $(host)</description>
-</rule>
+  <rule id="100016" level="14">
+    <field name="KES.event.code">GNRL_EV_DEVCTRL_DEV_PLUG_DENIED</field>
+    <decoded_as>Kaspersky</decoded_as>
+    <description>KES ($(KES.module)): $(KES.module.action) на $(host)</description>
+  </rule>
 
-<rule id="100017" level="12">
-<field name="KES.event.code">000000d1</field>
-<mitre><id>T1562</id></mitre>
-<decoded_as>Kaspersky</decoded_as>
-<description>KES ($(KES.module)): $(KES.module.action) на $(host)</description>
-</rule>
+  <rule id="100017" level="14">
+    <field name="KES.event.code">000000d1</field>
+    <mitre><id>T1562</id></mitre>
+    <decoded_as>Kaspersky</decoded_as>
+    <description>KES ($(KES.module)): $(KES.module.action) на $(host)</description>
+  </rule>
 
-<rule id="100018" level="15">
-<field name="KES.event.code">000000e7</field>
-<mitre><id>T1204.002</id></mitre>
-<decoded_as>Kaspersky</decoded_as>
-<description>KES ($(KES.module)): $(KES.module.action) на $(host)</description>
-</rule>
+  <rule id="100018" level="14">
+    <field name="KES.event.code">000000e7</field>
+    <mitre><id>T1204.002</id></mitre>
+    <decoded_as>Kaspersky</decoded_as>
+    <description>KES ($(KES.module)): $(KES.module.action) на $(host)</description>
+  </rule>
 
-<rule id="100019" level="15">
-<field name="KES.event.code">00000139</field>
-<decoded_as>Kaspersky</decoded_as>
-<mitre><id>T1204.002</id></mitre>
-<description>KES ($(KES.module)): $(KES.module.action) на $(host)</description>
-</rule>
+  <rule id="100019" level="14">
+    <field name="KES.event.code">00000139</field>
+    <decoded_as>Kaspersky</decoded_as>
+    <mitre><id>T1204.002</id></mitre>
+    <description>KES ($(KES.module)): $(KES.module.action) на $(host)</description>
+  </rule>
 
-<rule id="100020" level="15">
-<field name="KES.event.code">GNRL_EV_VIRUS_FOUND_AND_REPORTED</field>
-<mitre><id>T1204.001</id></mitre>
-<decoded_as>Kaspersky</decoded_as>
-<description>KES ($(KES.module)): $(KES.module.action) на $(host)</description>
-</rule>
+  <rule id="100020" level="14">
+    <field name="KES.event.code">GNRL_EV_VIRUS_FOUND_AND_REPORTED</field>
+    <mitre><id>T1204.001</id></mitre>
+    <decoded_as>Kaspersky</decoded_as>
+    <description>KES ($(KES.module)): $(KES.module.action) на $(host)</description>
+  </rule>
 
-<rule id="100021" level="15">
-<field name="KES.event.code">GNRL_EV_VIRUS_FOUND_AND_PASSED</field>
-<mitre><id>T1204.001</id></mitre>
-<decoded_as>Kaspersky</decoded_as>
-<description>KES ($(KES.module)): $(KES.module.action) на $(host)</description>
-</rule>
+  <rule id="100021" level="14">
+    <field name="KES.event.code">GNRL_EV_VIRUS_FOUND_AND_PASSED</field>
+    <mitre><id>T1204.001</id></mitre>
+    <decoded_as>Kaspersky</decoded_as>
+    <description>KES ($(KES.module)): $(KES.module.action) на $(host)</description>
+  </rule>
 
-<rule id="100022" level="15">
-<field name="KES.event.code">00000803</field>
-<mitre><id>T1200</id></mitre>
-<decoded_as>Kaspersky</decoded_as>
-<description>KES ($(KES.module)): $(KES.module.action) на $(host)</description>
-</rule>
+  <rule id="100022" level="14">
+    <field name="KES.event.code">00000803</field>
+    <mitre><id>T1200</id></mitre>
+    <decoded_as>Kaspersky</decoded_as>
+    <description>KES ($(KES.module)): $(KES.module.action) на $(host)</description>
+  </rule>
 
-<rule id="100023" level="15">
-<field name="KES.event.code">00000898</field>
-<decoded_as>Kaspersky</decoded_as>
-<description>KES ($(KES.module)): $(KES.module.action) на $(host)</description>
-</rule>
+  <rule id="100023" level="14">
+    <field name="KES.event.code">00000898</field>
+    <decoded_as>Kaspersky</decoded_as>
+    <description>KES ($(KES.module)): $(KES.module.action) на $(host)</description>
+  </rule>
 
-<rule id="100024" level="15">
-<field name="KES.event.code">00000329</field>
-<decoded_as>Kaspersky</decoded_as>
-<description>KES ($(KES.module)): $(KES.module.action) на $(host)</description>
-</rule>
+  <rule id="100024" level="14">
+    <field name="KES.event.code">00000329</field>
+    <decoded_as>Kaspersky</decoded_as>
+    <description>KES ($(KES.module)): $(KES.module.action) на $(host)</description>
+  </rule>
 
-<rule id="100025" level="15">
-<field name="KES.event.code">000002c6</field>
-<mitre><id>T1562</id></mitre>
-<decoded_as>Kaspersky</decoded_as>
-<description>KES ($(KES.module)): $(KES.module.action) на $(host)</description>
-</rule>
+  <rule id="100025" level="14">
+    <field name="KES.event.code">000002c6</field>
+    <mitre><id>T1562</id></mitre>
+    <decoded_as>Kaspersky</decoded_as>
+    <description>KES ($(KES.module)): $(KES.module.action) на $(host)</description>
+  </rule>
 
-<rule id="100026" level="15">
-<field name="KES.event.code">GNRL_EV_WEB_URL_BLOCKED_BY_KSN</field>
-<decoded_as>Kaspersky</decoded_as>
-<mitre><id>T1204.001</id></mitre>
-<description>KES ($(KES.module)): $(KES.module.action) на $(host)</description>
-</rule>
+  <rule id="100026" level="14">
+    <field name="KES.event.code">GNRL_EV_WEB_URL_BLOCKED_BY_KSN</field>
+    <decoded_as>Kaspersky</decoded_as>
+    <mitre><id>T1204.001</id></mitre>
+    <description>KES ($(KES.module)): $(KES.module.action) на $(host)</description>
+  </rule>
 
-<rule id="100027" level="10">
-<field name="KES.event.code">000000d3</field>
-<decoded_as>Kaspersky</decoded_as>
-<mitre><id>T1562</id></mitre>
-<description>KES ($(KES.module)): $(KES.module.action) на $(host)</description>
-</rule>
+  <rule id="100027" level="14">
+    <field name="KES.event.code">000000d3</field>
+    <decoded_as>Kaspersky</decoded_as>
+    <mitre><id>T1562</id></mitre>
+    <description>KES ($(KES.module)): $(KES.module.action) на $(host)</description>
+  </rule>
 
-<rule id="100028" level="11">
-<field name="KES.event.code">GNRL_EV_OBJECT_DELETED</field>
-<mitre><id>T1204.002</id></mitre>
-<decoded_as>Kaspersky</decoded_as>
-<description>KES ($(KES.module)): $(KES.module.action) на $(host)</description>
-</rule>
+  <rule id="100028" level="10">
+    <field name="KES.event.code">GNRL_EV_OBJECT_DELETED</field>
+    <mitre><id>T1204.002</id></mitre>
+    <decoded_as>Kaspersky</decoded_as>
+    <description>KES ($(KES.module)): $(KES.module.action) на $(host)</description>
+  </rule>
 
-<rule id="100029" level="10">
-<field name="KES.event.code">000000d2</field>
-<decoded_as>Kaspersky</decoded_as>
-<description>KES ($(KES.module)): $(KES.module.action) на $(host)</description>
-</rule>
+  <rule id="100029" level="10">
+    <field name="KES.event.code">000000d2</field>
+    <decoded_as>Kaspersky</decoded_as>
+    <description>KES ($(KES.module)): $(KES.module.action) на $(host)</description>
+  </rule>
 
-<rule id="100030" level="10">
-<field name="KES.event.code">000000d7</field>
-<decoded_as>Kaspersky</decoded_as>
-<description>KES ($(KES.module)): $(host) $(KES.module.action) </description>
-</rule>
+  <rule id="100030" level="10">
+    <field name="KES.event.code">000000d7</field>
+    <decoded_as>Kaspersky</decoded_as>
+    <description>KES ($(KES.module)): $(host) $(KES.module.action) </description>
+  </rule>
 
-<rule id="100031" level="10">
-<field name="KES.event.code">000000e8</field>
-<decoded_as>Kaspersky</decoded_as>
-<description>KES ($(KES.module)): $(KES.module.action) на $(host)</description>
-</rule>
+  <rule id="100031" level="10">
+    <field name="KES.event.code">000000e8</field>
+    <decoded_as>Kaspersky</decoded_as>
+    <description>KES ($(KES.module)): $(KES.module.action) на $(host)</description>
+  </rule>
 
-<rule id="100032" level="10">
-<field name="KES.event.code">000000e9</field>
-<decoded_as>Kaspersky</decoded_as>
-<description>KES ($(KES.module)): $(KES.module.action) на $(host)</description>
-</rule>
+  <rule id="100032" level="10">
+    <field name="KES.event.code">000000e9</field>
+    <decoded_as>Kaspersky</decoded_as>
+    <description>KES ($(KES.module)): $(KES.module.action) на $(host)</description>
+  </rule>
 
-<rule id="100033" level="10">
-<field name="KES.event.code">000007d1</field>
-<decoded_as>Kaspersky</decoded_as>
-<mitre><id>T1046</id>
-<id>T1016</id>
-<id>T1049</id></mitre>
-<group>attack,</group>
-<description>KES ($(KES.module)): $(KES.module.action) на $(host)</description>
-</rule>
+  <rule id="100033" level="10">
+    <field name="KES.event.code">000007d1</field>
+    <decoded_as>Kaspersky</decoded_as>
+    <mitre><id>T1046</id>
+    <id>T1016</id>
+    <id>T1049</id></mitre>
+    <group>attack</group>
+    <description>KES ($(KES.module)): $(KES.module.action) на $(host)</description>
+  </rule>
 
-<rule id="100034" level="7">
-<field name="KES.event.code">00000140</field>
-<decoded_as>Kaspersky</decoded_as>
-<description>KES ($(KES.module)): $(KES.module.action) на $(host)</description>
-</rule>
+  <rule id="100034" level="5">
+    <field name="KES.event.code">00000140</field>
+    <decoded_as>Kaspersky</decoded_as>
+    <description>KES ($(KES.module)): $(KES.module.action) на $(host)</description>
+  </rule>
 
-<rule id="100035" level="7">
-<field name="KES.event.code">00000141</field>
-<decoded_as>Kaspersky</decoded_as>
-<description>KES ($(KES.module)): $(KES.module.action) на $(host)</description>
-</rule>
+  <rule id="100035" level="10">
+    <field name="KES.event.code">00000141</field>
+    <decoded_as>Kaspersky</decoded_as>
+    <description>KES ($(KES.module)): $(KES.module.action) на $(host)</description>
+  </rule>
 
-<rule id="100036" level="7">
-<field name="KES.event.code">00000804</field>
-<decoded_as>Kaspersky</decoded_as>
-<description>KES ($(KES.module)): $(KES.module.action) на $(host)</description>
-</rule>
+  <rule id="100036" level="10">
+    <field name="KES.event.code">00000804</field>
+    <decoded_as>Kaspersky</decoded_as>
+    <description>KES ($(KES.module)): $(KES.module.action) на $(host)</description>
+  </rule>
 
-<rule id="100037" level="10">
-<field name="KES.event.code">000002f2</field>
-<decoded_as>Kaspersky</decoded_as>
-<description>KES ($(KES.module)): $(KES.module.action) на $(host)</description>
-</rule>
+  <rule id="100037" level="10">
+    <field name="KES.event.code">000002f2</field>
+    <decoded_as>Kaspersky</decoded_as>
+    <description>KES ($(KES.module)): $(KES.module.action) на $(host)</description>
+  </rule>
 
-<rule id="100038" level="10">
-<field name="KES.event.code">000003f8</field>
-<decoded_as>Kaspersky</decoded_as>
-<description>KES ($(KES.module)): $(KES.module.action) на $(host)</description>
-</rule>
+  <rule id="100038" level="10">
+    <field name="KES.event.code">000003f8</field>
+    <decoded_as>Kaspersky</decoded_as>
+    <description>KES ($(KES.module)): $(KES.module.action) на $(host)</description>
+  </rule>
 
-<rule id="100039" level="12">
-<field name="KES.event.code">000000d6</field>
-<decoded_as>Kaspersky</decoded_as>
-<mitre><id>T1562</id></mitre>
-<description>KES ($(KES.module)): $(KES.module.action) на $(host)</description>
-</rule>
+  <rule id="100039" level="14">
+    <field name="KES.event.code">000000d6</field>
+    <decoded_as>Kaspersky</decoded_as>
+    <mitre><id>T1562</id></mitre>
+    <description>KES ($(KES.module)): $(KES.module.action) на $(host)</description>
+  </rule>
 
-<rule id="100040" level="7">
-<field name="KES.event.code">00000abe</field>
-<decoded_as>Kaspersky</decoded_as>
-<description>KES ($(KES.module)): $(KES.module.action) на $(host)</description>
-</rule>
+  <rule id="100040" level="10">
+    <field name="KES.event.code">00000abe</field>
+    <decoded_as>Kaspersky</decoded_as>
+    <description>KES ($(KES.module)): $(KES.module.action) на $(host)</description>
+  </rule>
 
-<rule id="100090" level="7">
-<field name="KES.event.code">KLAUD_EV_SERVERCONNECT</field>
-<decoded_as>Kaspersky</decoded_as>
-<mitre><id>T1078</id></mitre>
-<description>KSC. $(KES.module): успешно (login: $(KES.p3))</description>
-</rule>
+  <rule id="100041" level="10">
+    <field name="KES.event.code">FSEE_AKPLUGIN_OBJECT_BACKED_UP</field>
+    <decoded_as>Kaspersky</decoded_as>
+    <mitre><id>T1204.002</id></mitre>
+    <description>KES ($(KES.module)): $(KES.module.action) на $(host)</description>
+  </rule>
 
-<rule id="100091" level="10">
-<if_sid>100090</if_sid>
-<match>invalid</match>
-<decoded_as>Kaspersky</decoded_as>
-<mitre><id>T1110</id></mitre>
-<description>KSC. $(KES.module): ошибка - (login: $(KES.p3))</description>
-</rule>
+  <rule id="100090" level="5">
+    <field name="KES.event.code">KLAUD_EV_SERVERCONNECT</field>
+    <decoded_as>Kaspersky</decoded_as>
+    <mitre><id>T1078</id></mitre>
+    <description>KSC. $(KES.module): успешно (login: $(KES.p3))</description>
+    <group>authentication_success,</group>
+  </rule>
+
+  <rule id="100091" level="10">
+    <if_sid>100090</if_sid>
+    <match>invalid</match>
+    <decoded_as>Kaspersky</decoded_as>
+    <description>KSC. $(KES.module): ошибка (login: $(KES.p3))</description>
+    <mitre><id>T1110</id></mitre>
+    <group>authentication_failed,</group>
+  </rule>
+
 </group>
