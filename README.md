@@ -1,8 +1,8 @@
 # KSC decoders and rules for Wazuh (ru_RU)
 
-Проверно с актуальными версиями Kaspersky Security Center, Kaspersky Endpoint Security для Windows и Kaspersky Endpoint Security для Linux (язык локализации RU)
+Проверно с актуальными версиями Kaspersky Security Center, Kaspersky Endpoint Security для Windows и Kaspersky Endpoint Security для Linux (язык локализации RU). **Работает только при сборе логов с KSC через встроенный в Wazuh syslog server (https://documentation.wazuh.com/current/user-manual/capabilities/log-data-collection/syslog.html). Если вы собираете логи через syslog server в Linux, то параметров в квадратных скобках не будет!**
 
-В случае, если поддерживаемых событий недостаточно, достаточно продублировать правила, заменив ID событий на нужные из https://support.kaspersky.ru/kes12/246282
+В случае, если поддерживаемых событий недостаточно, можно просто продублировать правила, заменив ID событий на нужные из https://support.kaspersky.ru/kes12/246282
 
 ## Поддерживаемые события
 
@@ -61,7 +61,7 @@
 ![123](https://github.com/tread-lightly/KSC_decoders_and_rules_for_Wazuh_ru_RU/assets/125260132/dd3dae2f-edee-4d4b-a16c-184ab91edd6d)
 
 ## Пример функционирования
-Для корректной обработки dstuser в соответствующий декодер нужно добавить имя домена:
+Для красивой обработки dstuser в соответствующий декодер нужно добавить имя домена:
 
 ```<regex>DOMAIN\\\\(\.*)"</regex>```
 
