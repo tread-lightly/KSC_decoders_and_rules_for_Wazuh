@@ -1,12 +1,19 @@
-# KSC decoders and rules for Wazuh (ru_RU)
+# KSC decoders and rules for Wazuh
 
-Проверно с актуальными версиями Kaspersky Security Center, Kaspersky Endpoint Security для Windows и Kaspersky Endpoint Security для Linux (язык локализации RU). **Работает только при сборе логов с KSC через встроенный в Wazuh syslog server (https://documentation.wazuh.com/current/user-manual/capabilities/log-data-collection/syslog.html). Если вы собираете логи через syslog server в Linux, то параметров в квадратных скобках не будет!**
+### IMPORTANT: ###
+
+> These rules and decoders primary designed for logs from а Kaspersky Security Center with russian localization. However this will work with different localizations anyway but decoded parameters may not be as detailed as it may be
+
+### ВАЖНО: ###
+Проверно с актуальными версиями Kaspersky Security Center, Kaspersky Endpoint Security для Windows и Kaspersky Endpoint Security для Linux (язык локализации RU). 
+
+**Работает только при сборе логов с KSC через встроенный в Wazuh syslog server (https://documentation.wazuh.com/current/user-manual/capabilities/log-data-collection/syslog.html). Если вы собираете логи через syslog server в Linux, то параметров в квадратных скобках не будет!**
 
 В случае, если поддерживаемых событий недостаточно, можно просто продублировать правила, заменив ID событий на нужные из https://support.kaspersky.ru/kes12/246282
 
-## Поддерживаемые события
+## Поддерживаемые события (Supported events)
 
-**1. Критические:**
+**1. Критические (Critial):**
 
    - GNRL_EV_VIRUS_FOUND // Обнаружен вредоносный объект (локальные базы)
    - 0000003c // Возникла ошибка проверки зашифрованного соединения. Домен добавлен в список исключений
@@ -27,9 +34,9 @@
    - 00000329 // Сетевая активность запрещена | Сетевое соединение заблокировано 
    - 000002c6 // Запрещенный процесс был запущен до старта Kaspersky Endpoint Security для Windows
 
-**2. Отказы функционирования:**
+**2. Отказы функционирования (Functional failure):**
 
-**3. Предупреждения:**
+**3. Предупреждения (Warning):**
 
    - GNRL_EV_OBJECT_BLOCKED // Загрузка объекта запрещена | Запрещено
    - GNRL_EV_SUSPICIOUS_OBJECT_FOUND // Обнаружено легальное приложение, которое может быть использовано злоумышленниками для нанесения вреда компьютеру или данным пользователя (локальные базы | KSN)
@@ -50,17 +57,17 @@
    - 000003f8 // Операция отменена пользователем
    - 000000d6 // Компоненты защиты выключены
 
-**4. Информационные сообщения:**
+**4. Информационные сообщения (Informational message):**
      
    - GNRL_EV_PASSWD_ARCHIVE_FOUND // Обнаружен защищенный паролем архив
    - GNRL_EV_DEVCTRL_DEV_PLUGGED // Устройство подключено
    - GNRL_EV_DEVCTRL_DEV_UNPLUGGED // Устройство отключено
    - KLAUD_EV_SERVERCONNECT // Аудит (подключение к Серверу администрирования)
 
-## Интеграция с MITRE ATT&CK
+## Интеграция с MITRE ATT&CK (MITRE ATT&CK integration)
 ![123](https://github.com/tread-lightly/KSC_decoders_and_rules_for_Wazuh_ru_RU/assets/125260132/dd3dae2f-edee-4d4b-a16c-184ab91edd6d)
 
-## Пример функционирования
+## Пример функционирования (processing example):
 Для красивой обработки dstuser в соответствующий декодер нужно добавить имя домена:
 
 ```<regex>DOMAIN\\\\(\.*)"</regex>```
