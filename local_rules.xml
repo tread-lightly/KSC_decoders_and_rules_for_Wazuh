@@ -328,17 +328,53 @@
     <field name="KES.event.code">KLAUD_EV_SERVERCONNECT</field>
     <decoded_as>Kaspersky</decoded_as>
     <mitre><id>T1078</id></mitre>
-    <description>KSC. $(KES.module): успешно (login: $(KES.p3))</description>
+    <description>KSC. $(KES.module): успешно (login: $(KES.p3) src: $(KES.p2))</description>
     <group>authentication_success,</group>
   </rule>
 
   <rule id="100091" level="10">
     <if_sid>100090</if_sid>
-    <match>invalid</match>
+    <match type="pcre2">invalid|не удалось подключиться к Серверу администрирования</match>
     <decoded_as>Kaspersky</decoded_as>
-    <description>KSC. $(KES.module): ошибка (login: $(KES.p3))</description>
+    <description>KSC. $(KES.module): ошибка (login: $(KES.p3) src: $(KES.p2))</description>
     <mitre><id>T1110</id></mitre>
     <group>authentication_failed,</group>
   </rule>
 
+  <rule id="100092" level="5">
+    <field name="KES.event.code">KLSRV_UPD_BASES_UPDATED</field>
+    <decoded_as>Kaspersky</decoded_as>
+    <description>KSC. $(KES.module)</description>
+  </rule>
+
+  <rule id="100093" level="3">
+    <field name="KES.event.code">KLSRV_EVENT_HOSTS_NOT_VISIBLE</field>
+    <decoded_as>Kaspersky</decoded_as>
+    <description>KSC. $(KES.module) (Имя: $(KES.p1), дней: $(KES.p2))</description>
+  </rule>
+
+  <rule id="100094" level="5">
+    <field name="KES.event.code">KLSRV_HOST_STATUS_WARNING</field>
+    <decoded_as>Kaspersky</decoded_as>
+    <description>KSC. $(KES.p1)</description>
+  </rule>
+
+  <rule id="100095" level="5">
+    <field name="KES.event.code">KLSRV_HOST_STATUS_CRITICAL</field>
+    <decoded_as>Kaspersky</decoded_as>
+    <description>KSC. $(KES.p1)</description>
+  </rule>
+
+  <rule id="100096" level="5">
+    <field name="KES.event.code">KLAUD_EV_TASK_STATE_CHANGED</field>
+    <decoded_as>Kaspersky</decoded_as>
+    <description>KSC. $(KES.module): Объект: "$(KES.p1)", Пользователь: $(KES.p3)</description>
+  </rule>
+
+  <rule id="100097" level="5">
+    <field name="KES.event.code">KLSRV_HOST_MOVED_WITH_RULE_EX</field>
+    <decoded_as>Kaspersky</decoded_as>
+    <description>KSC. $(KES.module): Правило: "$(KES.p2)", Хост: $(KES.p1)</description>
+  </rule>
+  
 </group>
