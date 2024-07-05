@@ -376,5 +376,18 @@
     <decoded_as>Kaspersky</decoded_as>
     <description>KSC. $(KES.module): Правило: "$(KES.p2)", Хост: $(KES.p1)</description>
   </rule>
+
+  <rule id="100098" level="5">
+    <field name="KES.event.code">KLAUD_EV_ADMGROUP_CHANGED</field>
+    <decoded_as>Kaspersky</decoded_as>
+    <description>KSC. $(KES.module): Хост $(KES.p5) перемещён в группу $(KES.p1) пользователем $(KES.p3)</description>
+  </rule>
+
+  <rule id="100099" level="5">
+    <if_sid>100098</if_sid>
+    <match type="pcre2">было удалено из группы</match>
+    <decoded_as>Kaspersky</decoded_as>
+    <description>KSC. $(KES.module): Хост $(KES.p5) удалён из группы $(KES.p1) пользователем $(KES.p3)</description>
+  </rule>
   
 </group>
