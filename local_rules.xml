@@ -4,7 +4,7 @@
 
 <group name="KES.rules,">
   <rule id="100001" level="5">
-    <field name="KES.type">0000013a</field>
+    <field name="KES.event.code">0000013a</field>
     <decoded_as>Kaspersky</decoded_as>
     <description>KES ($(KES.module)): $(KES.module.action) на $(dhost)</description>
   </rule>
