@@ -7,7 +7,7 @@
 ### ВАЖНО: ###
 Проверно с актуальными версиями Kaspersky Security Center, Kaspersky Endpoint Security для Windows и Kaspersky Endpoint Security для Linux (язык локализации RU). 
 
-**Работает только при сборе логов с KSC через встроенный в Wazuh syslog server (https://documentation.wazuh.com/current/user-manual/capabilities/log-data-collection/syslog.html). Если вы собираете логи через syslog server в Linux, то параметров в квадратных скобках не будет!**
+**Работает только при сборе логов с KSC через встроенный в Wazuh syslog server (https://documentation.wazuh.com/current/user-manual/capabilities/log-data-collection/syslog.html). Если вы собираете логи через syslog server в Linux, то параметров в квадратных скобках не будет**
 
 В случае, если поддерживаемых событий недостаточно, можно просто продублировать правила, заменив ID событий на нужные из https://support.kaspersky.ru/kes12/246282
 
@@ -87,5 +87,3 @@
 Результат обработки:
 
 ![a](https://github.com/tread-lightly/KSC_decoders_and_rules_for_Wazuh_ru_RU/assets/125260132/797b7f4d-6b73-4073-8b6c-d9ab54ad5c71)
-
-[![telegram:](https://img.shields.io/badge/Telegram-@wladimirwakhrushew-blue)](https://t.me/wladimirwakhrushew)
